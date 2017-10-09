@@ -1,0 +1,11 @@
+$("#mynewticket").modal('hide');
+
+$(".ticket_name").val('');
+$(".ticket_email").val('');
+$(".ticket_subject").val('');
+$(".ticket_content").val('');
+
+// Inserts the element at the begining of the div and add to the ending
+// j command tells us it is js rendering ruby
+$("#container_tickets").prepend('<%= j render @ticket %>');
+$("#ticket_<%= @ticket.id %>").hide().fadeIn(1000);

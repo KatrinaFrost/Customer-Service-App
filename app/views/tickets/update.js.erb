@@ -1,0 +1,6 @@
+$("#myupdateticket_<%= @ticket.id %>").modal('hide');
+
+$("#ticket_<%= @ticket.id %>").fadeOut(500, function() {
+  $(this).remove();
+  $("#container_tickets").prepend('<%= j render @ticket %>')
+})
