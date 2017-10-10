@@ -1,17 +1,29 @@
+<!-- _________________________Create Ticket________________________________  -->
+
 <div class="blog-main box text-center" id="ticket_<%= ticket.id %>">
 
   <div class="panel panel-info"><!-- Panel Info -->
 
+    <%= ticket.score%>
+
     <div class="panel-heading">
+
+      <!-- Email -->
+      <!-- Name -->
+
       <h3 class="panel-subject">
+      <!-- Subject -->
       <%= ticket.subject %></h3>
+      <!-- Content -->
       <p><%= ticket.content %></p>
+
     </div>
+  </div>
 
       <div class="btn-group" role="group" aria-label="...">
           <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myupdateticket_<%= ticket.id %>">
-            Edit <%= ticket.score%>
-          <%= link_to 'Destroy', ticket, method: :delete, class: "btn btn-danger", remote: true %>
+            Edit
+          <!-- <%= link_to 'Destroy', ticket, method: :delete, class: "btn btn-danger", remote: true %> -->
       </div>
     </div><!-- Panel Body -->
 
@@ -28,33 +40,48 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Edit</h4>
       </div>
+
+
+      <!-- Tickets Modal -->
       <div class="modal-body">
 
+        <!-- Name view -->
+        <div class="modal-body">
+          <div class="field">
+            <%= f.label :name %><br>
+            <%= f.text_area :name, class: "form-control ticket_name" %>
+          </div>
+
+        <!-- Email view -->
         <div class="modal-body">
           <div class="field">
             <%= f.label :email %><br>
-            <%= f.text_area :email, class: "form-control ticket_title" %>
+            <%= f.text_area :email, class: "form-control ticket_email" %>
           </div>
 
+        <!-- Subject view -->
         <div class="modal-body">
           <div class="field">
             <%= f.label :subject %><br>
-            <%= f.text_area :subject, class: "form-control ticket_title" %>
+            <%= f.text_area :subject, class: "form-control ticket_subject" %>
           </div>
 
+          <!-- Content view -->
           <div class="field">
             <%= f.label :content %><br>
             <%= f.text_area :content, class: "form-control ticket_content" %>
           </div>
         </div>
       </div>
+
+      <!-- Submit button -->
       <div class="modal-footer">
         <button type="button" id="myupdatebutton_<%= ticket.id %>" class="btn btn-default" data-dismiss="modal">Close</button>
         <%= submit_tag "Update", class: "btn btn-primary" %>
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 <% end %>
   <!-- Modal -->

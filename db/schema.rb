@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(version: 20171010000145) do
   create_table "chats", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "subject"
+
   end
 
   create_table "tickets", force: :cascade do |t|

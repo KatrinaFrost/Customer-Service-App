@@ -1,3 +1,5 @@
+<!-- _________________________ Chat form ____________________________________ -->
+
 <%= form_with(model: chat, local: true) do |form| %>
   <% if chat.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +12,24 @@
       </ul>
     </div>
   <% end %>
+
+  <!-- Name -->
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :chat_name %>
+  </div>
+
+  <!-- Subject -->
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, id: :chat_name %>
+  </div>
+
+  <!-- Content -->
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :chat_name %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
