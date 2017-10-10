@@ -42,6 +42,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rails_admin', '~> 1.2'
   gem 'devise'
+  gem 'sentimental', '~> 1.4', '>= 1.4.1'
 end
 
 group :development do

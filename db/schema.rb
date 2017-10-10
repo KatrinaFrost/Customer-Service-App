@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20171010000145) do
     t.string "userId"
     t.string "subject"
     t.string "content"
+    t.decimal "sentiment"
+    t.decimal "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
