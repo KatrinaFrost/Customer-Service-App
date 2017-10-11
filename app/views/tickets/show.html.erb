@@ -1,29 +1,35 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @ticket.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @ticket.email %>
-</p>
-
-<p>
-  <strong>Userid:</strong>
-  <%= @ticket.userId %>
-</p>
-
-<p>
-  <strong>Subject:</strong>
-  <%= @ticket.subject %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @ticket.content %>
-</p>
-
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
-<%= link_to 'Back', tickets_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      bubbles go here
+      <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
+      <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
+      <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
+    </div>
+    <div class="col-xs-8">
+      <div>Single ticket nav panel goes here.</div>
+      <br/>
+      <div id="container_tickets">
+        <div type="button" class="blog-main box text-center" id="ticket_<%= @ticket.id %>">
+          <div class="panel panel-info">
+            <div>
+              <% if @ticket.score > 0.3 %>
+                <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
+              <% end %>
+              <% if @ticket.score >= 0 && @ticket.score <= 0.2  %>
+                <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
+              <% end %>
+              <% if @ticket.score < 0  %>
+                <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
+              <% end %>
+              <p><%= @ticket.name %></p>
+              <p><%= @ticket.email %></p>
+              <p><%= @ticket.subject %></p>
+              <p><%= @ticket.content %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

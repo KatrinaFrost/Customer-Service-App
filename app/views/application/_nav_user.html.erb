@@ -11,18 +11,18 @@
       </button>
 
       <!-- Redirects to tickets page when logged in and Redirects to login page if loged out -->
-      <a class="navbar-brand" href="tickets">C:S Desk</a>
+      <a class="navbar-brand">C:S Desk</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
       <!-- Ticket Nav -->
-        <li class="active"><a href="tickets">Tickets<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/tickets">Tickets<span class="sr-only">(current)</span></a></li>
       <!-- Dashboard Nav -->
-        <li><a href="admin">Dashbord</a></li>
+        <li><a href="/admin">Dashbord</a></li>
       <!-- Chat Nav -->
-        <li><a href="chats">Chat</a></li>
+        <li><a href="/chats">Chat</a></li>
 
       </ul>
 
@@ -30,7 +30,9 @@
       <ul class="nav navbar-nav navbar-right">
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Name goes here<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <%= current_user.name %>
+          <span class="caret"></span></a>
           <ul class="dropdown-menu">
 
             <!-- Right Drop down menu links -->

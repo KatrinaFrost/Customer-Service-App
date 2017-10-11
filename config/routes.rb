@@ -4,12 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :tickets
-
   root "home#index"
 
   get '/chats' => 'chats#index'
-
+  
   # TODO
   # get '/blog' => 'blog#index'
   #
@@ -19,6 +17,7 @@ Rails.application.routes.draw do
 
   # TODO
   resources :chats
+  resources :tickets
   # resources :blog
   # resources :factsandquestions
   # resources :tips

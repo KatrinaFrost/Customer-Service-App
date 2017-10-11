@@ -3,7 +3,7 @@ class CreateTickets < ActiveRecord::Migration[5.1]
     create_table :tickets do |t|
       t.string :name
       t.string :email
-      t.string :userId
+      t.string :user_id
       t.string :subject
       t.string :content
       t.decimal :sentiment

@@ -16,8 +16,12 @@
 
   <body>
 
-    <%= render 'nav'%>
-    
+    <% if current_user %>
+      <%= render 'nav_user'%>
+    <% else %>
+      <%= render 'nav_home'%>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
