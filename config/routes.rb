@@ -4,12 +4,25 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :tickets
+
   root "home#index"
 
   get '/chats' => 'chats#index'
 
-  resources :chats
+  # TODO
+  # get '/blog' => 'blog#index'
+  #
+  # get '/factsandquestions' => 'factsandquestions#index'
+  #
+  # get '/tips' => 'tips#index'
 
-  resources :tickets
+  # TODO
+  resources :chats
+  # resources :blog
+  # resources :factsandquestions
+  # resources :tips
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
