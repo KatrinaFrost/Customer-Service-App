@@ -1,33 +1,21 @@
 <!-- _________________________Create Ticket________________________________  -->
 
-<div class="blog-main box text-center" id="ticket_<%= ticket.id %>">
-
-  <div class="panel panel-info"><!-- Panel Info -->
-
-    <%= ticket.score %>
-
-    <% if ticket.score > 0.3 %>
-      Happy :) <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
-    <% end %>
-    <% if ticket.score >= 0 && ticket.score <= 0.2  %>
-      ok <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
-    <% end %>
-    <% if ticket.score < 0  %>
-      sad <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
-    <% end %>
-
-    <div class="panel-heading">
-
-      <!-- Email -->
-      <!-- Name -->
-
-      <h3 class="panel-subject">
-      <!-- Subject -->
-      <%= ticket.subject %></h3>
-      <!-- Content -->
-      <p><%= ticket.content %></p>
-
+<div type="button" class="blog-main box text-center" id="ticket_<%= ticket.id %>">
+  <div class="panel panel-info">
+    <div>
+      <!-- <%= ticket.score %> -->
+      <% if ticket.score > 0.3 %>
+        <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
+      <% end %>
+      <% if ticket.score >= 0 && ticket.score <= 0.2  %>
+        <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
+      <% end %>
+      <% if ticket.score < 0  %>
+        <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
+      <% end %>
+      <p><%= ticket.name %></p>
+      <p><%= ticket.email %></p>
+      <p><%= ticket.subject %></p>
     </div>
   </div>
-
 </div>

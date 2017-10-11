@@ -8,7 +8,6 @@ class CreateTickets < ActiveRecord::Migration[5.1]
       t.string :content
       t.decimal :sentiment
       t.decimal :score
-
       t.timestamps
     end
   end
