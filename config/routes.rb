@@ -5,9 +5,16 @@ Rails.application.routes.draw do
   devise_for :users
 
   root "home#index"
-
   get '/chats' => 'chats#index'
   post '/messages' => 'messages#create'
+  get '/chat' => 'chat#index'
+
+  get '/customer' => 'customer#index'
+  get '/customer' => 'customer#sent'
+
+  resources :customers do
+    resources :tickets
+  end
 
   # TODO
   # get '/blog' => 'blog#index'

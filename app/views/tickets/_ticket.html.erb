@@ -5,13 +5,13 @@
     <div>
       <!-- <%= ticket.score %> -->
       <% if ticket.score > 0.3 %>
-        <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
+        <div style="background: lightgreen; width: 20px; height: 20px; border-radius: 40px;"></div>
       <% end %>
       <% if ticket.score >= 0 && ticket.score <= 0.2  %>
-        <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
+        <div style="background: blue; width: 20px; height: 20px; border-radius: 40px;"></div>
       <% end %>
       <% if ticket.score < 0  %>
-        <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
+        <div style="background: red; width: 20px; height: 20px; border-radius: 40px;"></div>
       <% end %>
       <p><%= ticket.name %></p>
       <p><%= ticket.email %></p>
