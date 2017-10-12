@@ -11,22 +11,12 @@ class MessageController < ApplicationController
   end
 
   def create
+    @message = Message.new params[:content]
 
-    # this needs to create a new message....
-    redirect_to :action => 'new'
-    # message = Message.create(message_params)
-    # @message = Message.new(message_params)
-    # redirect_to message_path
-    @message = Message.new(params[:content])
-    if(@message.save)
-        #Saved successfully; go to the index (or wherever)...
-        redirect_to '/message'
-         redirect_to :action => 'new'
+    if @message.save
+      redirect_to @message
     else
-      redirect_to '/message'
-        #Validation failed; show the "new" form again...
-        # render :action => :new
+      render :new
     end
   end
-
 end
