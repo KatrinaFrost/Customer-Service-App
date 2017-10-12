@@ -1,11 +1,21 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-4">
-      Red: Complaint Blue: Neutral Green: Positive
+
+      <h1 class="bubbleText">Red: Complaint | Blue: Neutral | Green: Positive</h1>
+
+    <div class="col-xs-1">
+
       <div style="background: lightgreen; width: 30px; height: 30px; border-radius: 30px;"></div>
+    </div>
+
+    <div class="col-xs-1">
       <div style="background: blue; width: 30px; height: 30px; border-radius: 30px;"></div>
+    </div>
+
+    <div class="col-xs-1">
       <div style="background: red; width: 30px; height: 30px; border-radius: 30px;"></div>
     </div>
+
     <div class="col-xs-8">
       <%= render "ticketButtons" %>
       <br/>

@@ -1,4 +1,8 @@
-<h1>Hello we would love to hear from you</h1>
+<div class="customerFormHeader">
+  <h1>We would love to hear from you...</h1>
+</div>
 
-<%= render 'tickets/form', ticket: @ticket %>
-<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+<div class="customerForm">
+  <%= render 'tickets/form', ticket: @ticket %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+</div>

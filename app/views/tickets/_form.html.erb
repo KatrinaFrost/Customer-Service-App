@@ -2,7 +2,7 @@
 
 <%= form_with(model: ticket, local: true) do |form| %>
 
-  <% if ticket.errors.any? %>
+  <!-- <% if ticket.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
 
@@ -12,34 +12,32 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> -->
 
-  <div class="field">
-    <%= form.label :name %>
+<div class="customerContainer">
+  <%= form.label :name %>
+  <div class="customerForm">
     <%= form.text_field :name, id: :ticket_name %>
   </div>
 
-  <div class="field">
     <%= form.label :email %>
+  <div class="customerForm">
     <%= form.text_field :email, id: :ticket_email %>
   </div>
 
-  <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number, id: :ticket_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :subject %>
+<%= form.label :subject %>
+  <div class="customerForm">
     <%= form.text_field :subject, id: :ticket_subject %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
+<%= form.label :content %>
+  <div class="customerForm">
     <%= form.text_field :content, id: :ticket_content %>
   </div>
 
-  <div class="actions">
+  <div class="customerFormButton">
     <%= form.submit %>
   </div>
+</div>
+
 <% end %>
