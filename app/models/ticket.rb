@@ -1,7 +1,7 @@
 class Ticket < ApplicationRecord
 
   belongs_to :user, optional: true
-
+  belongs_to :customer
   before_save :set_sentiment
 
   # rule needs to be added to assign a ticket automatically to staff members id.
