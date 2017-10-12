@@ -39,11 +39,12 @@
         </div>
       <% end %>
       </div>
-      <%= form_tag("/message", method: "post") do %>
-        <%= label_tag(:q, "content:") %>
-        <%= text_field_tag(:q) %>
-        <%= submit_tag("Reply") %>
-      <% end %>
+      <%= form_for(@message, url: '/message', method: "post") do |f| %>
+       <%= f.label :content %>
+       <%= f.text_field :content %>
+       <%= hidden_field_tag :ticket, @ticket.id %>
+       <%= f.submit "Reply" %>
+     <% end %>
     </div>
   </div>
 </div>

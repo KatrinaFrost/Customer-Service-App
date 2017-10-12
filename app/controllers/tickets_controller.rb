@@ -7,6 +7,7 @@ class TicketsController < ApplicationController
   # GET /tickets/1.json
   def show
     @ticket = Ticket.find params[:id]
+    @message = Message.new
   end
 
   # GET /tickets

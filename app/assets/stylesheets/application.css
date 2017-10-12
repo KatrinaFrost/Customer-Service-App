@@ -14,22 +14,9 @@
  *= require_self
  */
 
-.homeContainer {
-  padding: 5%;
-  background-color: lightgrey;
-}
 
-.home {
-
-}
-
- .intro {
-   flex-flow: column;
- }
-
-.homeSignUpNow{
-  background-color: #2C9585;
-  height: 50px;
-  width: 180px;
-  color: black;
+.youCanContainer {
+  background-color: lightblue;
+  width: 100%;
+  height: 10%;
 }
