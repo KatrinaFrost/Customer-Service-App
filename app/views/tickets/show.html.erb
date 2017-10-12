@@ -32,6 +32,18 @@
           </div>
         </div>
       </div>
+      <div>
+      <% @ticket.messages.each do |m| %>
+        <div class="panel panel-info message">
+          <%= m.content %>
+        </div>
+      <% end %>
+      </div>
+      <%= form_tag("/message", method: "post") do %>
+        <%= label_tag(:q, "content:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Reply") %>
+      <% end %>
     </div>
   </div>
 </div>

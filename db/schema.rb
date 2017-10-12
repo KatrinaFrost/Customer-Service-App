@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20171012042947) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.boolean "isAdmin"
+    t.string "ticket_id"
+    t.string "user_id"
+
   create_table "customers", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
