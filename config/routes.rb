@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   root "home#index"
 
   get '/chats' => 'chats#index'
-  
+  post '/messages' => 'messages#create'
+
   # TODO
   # get '/blog' => 'blog#index'
   #
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   # TODO
   resources :chats
   resources :tickets
+  resources :message
   # resources :blog
   # resources :factsandquestions
   # resources :tips
