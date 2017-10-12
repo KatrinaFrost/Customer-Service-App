@@ -6,8 +6,15 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  get '/chats' => 'chats#index'
-  
+  get '/chat' => 'chat#index'
+
+  get '/customer' => 'customer#index'
+  get '/customer' => 'customer#sent'
+
+  resources :customers do
+    resources :tickets
+  end
+
   # TODO
   # get '/blog' => 'blog#index'
   #
