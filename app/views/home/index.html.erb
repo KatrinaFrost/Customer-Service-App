@@ -1,39 +1,55 @@
-<div class="homeContainer">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<h1 class="home">Welcome to CS:Desk</h1>
-
-<h2 class="intro"> CS:Desk is the ultimate customer support software.</h2>
-
-<br>
-<%= link_to "sign_up", new_user_session_path %>
-
-<br>
-<hr>
-<br>
-
-<div class="youCanContainer">
-  <h2 class="youCan"> With CS:Desk, you can... </h2>
-  <ul>&#x2661 Stream Line</ul>
-  <ul>&#x2661 Collaborate</ul>
-  <ul>&#x2661 Check positive and negative scores</ul>
-  <ul>And lots lots more...</ul>
-</div>
+  <link rel="stylesheet" href="css/style.css">
 
 
-</div>
-<br>
-<hr>
-<br>
+  <title>CS:DESK</title>
 
-<h2 class="tryUs"> Try us. You will love the experience.</h2>
+</head>
+<body>
 
-<br>
+    <section class="section section-light">
+    <!-- section.section.section-light is shortcut to the above ^ -->
+    <h2>With CS:Desk you can . . . </h2>
 
-<!-- <button class="homeSignUpNow" type="button" name="SignUp" href="signup"></button> -->
-<%= link_to "sign up", new_user_session_path %>
+    <p>
+      <ul>&#x2661 Stream Line</ul>
+      <ul>&#x2661 Collaborate</ul>
+      <ul>&#x2661 Check positive and negative scores</ul>
+      <ul>And lots lots more...</ul>
+    </p>
+    </section>
 
-<br>
-<hr>
-<footer class="homeFooter">Made with &#x2661 by Katrina Frost</footer>
-</div>
-</div>
+    <!-- Image Two -->
+    <div class="pimg2">
+      <div class="ptext">
+        <span class="border trans">
+          <%= link_to "sign up", new_user_session_path %>
+        </span>
+      </div>
+    </div>
+
+    <section class="section section-dark">
+    <h2><h2>Try us. You will love the experience.</h2></h2>
+    </section>
+
+    <section class="section section-dark">
+
+    <p>
+      <%= link_to "sign up", new_user_session_path %>
+    <div class="pimg1">
+      <div class="ptext">
+      </div>
+    </div>
+
+    <footer class="homeFooter">Made with &#x2661 by Katrina Frost</footer>
+    </div>
+    </div>
+  <script src="js/main.js" charset="utf-8"></script>
+
+</body>
+</html>
