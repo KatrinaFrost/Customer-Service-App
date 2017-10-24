@@ -1,8 +1,10 @@
-#Fianal GA Project- CS: Helpdesk
+#Final GA Project- CS:Helpdesk
 
-#Imagine a world with one place you can store and organise those links?
+My inspiration for this project came from my experience in the customer service industry. I used many tools including help desks and wanted to recreate my own.
 
-#My project uses, HTML, Bootstrap and Ruby on Rails.
+I have used the Sentiment Gem to mark messages's based on their positive or negative comments to ensure messages are prioritised.
+
+#My project uses, HTML, Bootstrap, SCSS and Ruby on Rails. Also uses devise, sentiment and rails-admin gems.
 
 I also used:
 
@@ -13,25 +15,47 @@ Comments in code
 Deployment to Heroku
 Trello
 
+#Snippet of code?
+
+Sentiment colour score:
+
+<% if ticket.score > 0.3 %>
+  <div class="bubble happy"></div>
+<% end %>
+<% if ticket.score >= 0 && ticket.score <= 0.2  %>
+  <div class="bubble neutral"></div>
+<% end %>
+<% if ticket.score < 0  %>
+  <div class="bubble sad"></div>
+<% end %>
+
+
 #What issues did I experience and what I did not get working?
 
-Had a trouble understanding Associations and linking the models together
-Had trouble with the devise and rails admin gem due to their limitations to personalise.
-Understanding how Ruby works, however I have learnt a great deal from this project
+I Had trouble with the devise and rails admin gem due to their limitations to personalise.
+
+I learnt a lot about Ruby during this project, however there is still much more to learn.
 
 #What I would like to add?
 
 Social media icons
 Clean, condensed code
-More styling and features
-Implement the chat room
-Image / file upload
+More styling
+More features:
+
+  - Emails inbound and outbound
+  - Staff chat room
+  - Daily tips
+  - Image / file upload
 
 #What I would do next time?
 
 Take a bit more time in understanding what I want the app to do and achieve
 Spend more time to understand the navigation and what I need to do to connect the models together
-Git hub more often (everytime something works)
+
+#Whats next?
+
+I plan to continue to work on this project in my own time, tidy up the code and add further features. i would also like to remove the rails-admin and make my own version.
 
 #Acknowledgments
 
