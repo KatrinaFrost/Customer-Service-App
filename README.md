@@ -1,5 +1,7 @@
 # Final GA Project- CS:Helpdesk
 
+(https://cs-tool.herokuapp.com/tickets)
+
 > My inspiration for this project came from my experience in the customer service industry. I used many tools including help desks and wanted to recreate my own.
 
 > I have used the Sentiment Gem to mark messages's based on their positive or negative comments to ensure messages are prioritised.
@@ -22,9 +24,10 @@
 
 #### Snippet of code?
 
-Sentiment colour score, I wanted to score the messages coming in from customers, the score is colour coded red for negative, blue for neutral and green for positive to help understand the customer better. I did this by writing the code below: 
+Sentiment colour score, I wanted to score the messages coming in from customers, the score is colour coded red for negative, blue for neutral and green for positive to help understand the customer better. I did this by writing the code below:
 
-`` <% if ticket.score > 0.3 %>
+```javascript
+<% if ticket.score > 0.3 %>
   <div class="bubble happy"></div>
 <% end %>
 <% if ticket.score >= 0 && ticket.score <= 0.2  %>
@@ -32,8 +35,8 @@ Sentiment colour score, I wanted to score the messages coming in from customers,
 <% end %>
 <% if ticket.score < 0  %>
   <div class="bubble sad"></div>
-<% end %> ``
-
+<% end %>
+```
 <hr>
 
 #### What issues did I experience and what I did not get working?
