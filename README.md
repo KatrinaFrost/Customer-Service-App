@@ -1,6 +1,6 @@
 # Final GA Project- CS:Helpdesk
 
-(https://cs-tool.herokuapp.com/tickets)
+https://cs-tool.herokuapp.com/tickets
 
 > My inspiration for this project came from my experience in the customer service industry. I used many tools including help desks and wanted to recreate my own.
 
