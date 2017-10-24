@@ -1,0 +1,25 @@
+$primar-button-height: 32px;
+
+.cs-button-group {
+  display: inline-block;
+}
+
+.cs-button-rounded {
+  border-radius: 4px;
+  background: #555;
+  color: white;
+  text-shadow: none;
+  border: none;
+  padding: 0 28px;
+  height: $primar-button-height;
+}
+
+.cs-button-square {
+  background: #555;
+  color: white;
+  text-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0 12px;
+  height: $primar-button-height;
+}

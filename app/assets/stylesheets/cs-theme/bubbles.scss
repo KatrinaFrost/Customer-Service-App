@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+$happy-bubble-color: #70C15D;
+$neutral-bubble-color: #5DA8C1;
+$sad-bubble-color: #C15D7F;
+$bubble-size: 30px;
+$bubble-radius: 40px;
+
+.bubble {
+  width: $bubble-size;
+  height: $bubble-size;
+  border-radius: $bubble-radius;
+  &.happy {
+    background-color: $happy-bubble-color;
+  }
+  &.neutral {
+    background-color: $neutral-bubble-color;
+  }
+  &.sad {
+    background-color: $sad-bubble-color;
+  }
+}
+
+.cs-divider {
+  min-height: 664px;
+  width: 1px;
+  margin: 0 15px;
+  background: $secondary-color-light;
+}

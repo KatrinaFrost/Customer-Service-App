@@ -1,50 +1,57 @@
 <!-- Agent Ticket Page -->
-
 <div class="container">
   <div class="row">
-    <div class="col-xs-4">
-      Red: Complaint Blue: Neutral Green: Positive
-      <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
-      <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
-      <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
+    <div class="col-xs-1">
+      <div class="bubble happy"></div>
+    </div>
+    <div class="col-xs-1">
+      <div class="bubble neutral"></div>
+    </div>
+    <div class="col-xs-1">
+      <div class="bubble sad"></div>
+    </div>
+    <div class="col-xs-1">
+      <div class="cs-divider"></div>
     </div>
     <div class="col-xs-8">
-      <div></div>
+      <%= render "ticketButtons" %>
       <br/>
       <div id="container_tickets">
-        <div type="button" class="blog-main box text-center" id="ticket_<%= @ticket.id %>">
-          <div class="panel panel-info">
+        <div type="button" class="cs-ticket blog-main box text-center" id="ticket_<%= @ticket.id %>">
+          <div class="panel-info">
             <div>
               <% if @ticket.score > 0.3 %>
-                <div style="background: lightgreen; width: 10px; height: 10px; border-radius: 20px;"></div>
+                <div class="bubble happy"></div>
               <% end %>
               <% if @ticket.score >= 0 && @ticket.score <= 0.2  %>
-                <div style="background: blue; width: 10px; height: 10px; border-radius: 20px;"></div>
+                <div class="bubble neutral"></div>
               <% end %>
               <% if @ticket.score < 0  %>
-                <div style="background: red; width: 10px; height: 10px; border-radius: 20px;"></div>
+                <div class="bubble sad"></div>
               <% end %>
-              <p><%= @ticket.name %></p>
-              <p><%= @ticket.email %></p>
-              <p><%= @ticket.subject %></p>
-              <p><%= @ticket.content %></p>
+              <div class="info">
+                <p class="name"><span>from:</span> <%= @ticket.name %></p>
+                <p class="email"><span>email:</span> <%= @ticket.email %></p>
+                <p class="subject"><span>subject:</span> <%= @ticket.subject %></p>
+                <p class="content"><span>content:</span> <%= @ticket.content %></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
-      <% @ticket.messages.each do |m| %>
-        <div class="panel panel-info message">
-          <%= m.content %>
-        </div>
-      <% end %>
-      </div>
-      <%= form_for(@message, url: '/message', method: "post") do |f| %>
-       <%= f.label :content %>
-       <%= f.text_field :content %>
-       <%= hidden_field_tag :ticket, @ticket.id %>
-       <%= f.submit "Reply" %>
-     <% end %>
+      <div class="cs-messages">
+        <% @ticket.messages.each do |m| %>
+          <div class="panel panel-info message">
+            <%= m.content %>
+          </div>
+        <% end %>
+
+        <%= form_for(@message, url: '/message', method: "post") do |f| %>
+         <%= f.text_area :content %>
+         <%= hidden_field_tag :ticket, @ticket.id %>
+         <%= f.submit "Reply", :type => 'button', :class => 'cs-button-rounded pull-right' %>
+       <% end %>
+     </div>
     </div>
   </div>
 </div>

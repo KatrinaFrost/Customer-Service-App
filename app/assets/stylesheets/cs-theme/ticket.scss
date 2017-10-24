@@ -1,0 +1,41 @@
+@import "variables.scss";
+
+.cs-ticket {
+  position: relative;
+  background-color: $secondary-color-light;
+  border-bottom-right-radius: 15px;
+  .bubble {
+    border: 6px solid white;
+    position: absolute;
+    left: -15px;
+    top: -16px;
+  }
+  .info {
+    text-align: left;
+    padding: 12px 24px;
+    color: $primary-font-color;
+    a {
+      color: $primary-font-color;
+    }
+    a:hover {
+      background: none;
+    }
+    .name {
+      font-size: 18px;
+    }
+    span {
+      color: $secondary-color-lightest;
+      font-size: 14px;
+      display: inline-block;
+      min-width: 70px;
+    }
+    .open {
+      text-align: right;
+    }
+  }
+  margin: 20px 0;
+}
+
+.cs-ticket:first-child {
+  margin: 0;
+}

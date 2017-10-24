@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+.navbar {
+  &.cs-navbar {
+    background: $primary-color;
+  }
+  a.cs-brand {
+    color: $primary-font-color;
+    cursor: pointer;
+  }
+}
+
+.cs-main-nav {
+  li {
+    a {
+      text-shadow: none;
+      background: $secondary-color-light;
+    }
+    a:hover {
+      color: $primary-font-color !important;
+    }
+    &.active {
+      a {
+        color: $primary-font-color;
+        background: $secondary-color;
+      }
+    }
+    &.active:hover {
+      a {
+        color: $primary-font-color;
+        background: $secondary-color;
+      }
+    }
+  }
+}
+
+.caret {
+  color: $primary-font-color
+}

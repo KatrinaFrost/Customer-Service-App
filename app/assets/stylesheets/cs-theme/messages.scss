@@ -1,0 +1,24 @@
+.cs-messages {
+  .message {
+    padding: 12px;
+    margin: 20px 0;
+    color: white;
+    border: 0;
+  }
+  .message:nth-child(odd) {
+    background: #C15D7F;
+  }
+  .message:nth-child(even) {
+    background: #408CA6;
+  }
+  textarea {
+    resize: none;
+    max-height: 94px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin: 0px 0px 15px;
+    padding: 10px;
+    height: 122px;
+    width: 100%;
+  }
+}

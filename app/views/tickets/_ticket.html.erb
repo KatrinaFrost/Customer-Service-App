@@ -1,22 +1,24 @@
 <!-- _________________________Create Ticket________________________________  -->
 
-<div type="button" class="blog-main box text-center" id="ticket_<%= ticket.id %>">
-  <div class="panel panel-info">
+<div type="button" class="cs-ticket blog-main box text-center" id="ticket_<%= ticket.id %>">
+  <div class="panel-info">
     <div>
       <!-- <%= ticket.score %> -->
       <% if ticket.score > 0.3 %>
-        <div style="background: lightgreen; width: 20px; height: 20px; border-radius: 40px;"></div>
+        <div class="bubble happy"></div>
       <% end %>
       <% if ticket.score >= 0 && ticket.score <= 0.2  %>
-        <div style="background: blue; width: 20px; height: 20px; border-radius: 40px;"></div>
+        <div class="bubble neutral"></div>
       <% end %>
       <% if ticket.score < 0  %>
-        <div style="background: red; width: 20px; height: 20px; border-radius: 40px;"></div>
+        <div class="bubble sad"></div>
       <% end %>
-      <p><%= ticket.name %></p>
-      <p><%= ticket.email %></p>
-      <p><%= ticket.subject %></p>
-      <%= link_to 'Open ticket', ticket_path(ticket) %>
+      <div class="info">
+        <p class="name"><span>from:</span> <%= ticket.name %></p>
+        <p class="subject"><span>subject:</span> <%= ticket.subject %></p>
+        <!-- <p><%= ticket.email %></p> -->
+        <p class="open"><%= link_to 'Open ticket', ticket_path(ticket) %></p>
+      </div>
     </div>
   </div>
 </div>
