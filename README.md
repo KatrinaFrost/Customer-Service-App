@@ -26,7 +26,7 @@ https://cs-tool.herokuapp.com/tickets
 
 Sentiment colour score, I wanted to score the messages coming in from customers, the score is colour coded red for negative, blue for neutral and green for positive to help understand the customer better. I did this by writing the code below:
 
-```javascript
+```ruby
 <% if ticket.score > 0.3 %>
   <div class="bubble happy"></div>
 <% end %>
@@ -77,7 +77,7 @@ I plan to continue to work on this project in my own time, tidy up the code and 
 
 <hr>
 
-##### Acknowledgments
+### Acknowledgments
 
 http://rubyonrails.org/ - for a great guide to all things Ruby https://deliveroo.com.au/ - for keeping me fed and sane www.w3schools.com - for Bootstrap guide www.stackoverflow.com
 
